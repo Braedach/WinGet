@@ -12,3 +12,13 @@ To install and remove a default set of applications by using proactive remediati
 Still testing but base code is working
 
 
+Problems
+
+WinGet will not work on a clean install of Windows 10 or Windows 11.  It requires an upgrade to the Microsoft Store
+WinGet has issues with Microsoft.Office been that it will install a x86 version on a x64 platform
+WinGet has issues with Microsoft Teams on Windows 11 - a corporate version via Office and the consumer version via default install
+Winget has issues with Microsoft OneNote for Windows Desktop and this should be removed in a corporate environment
+
+
+
+

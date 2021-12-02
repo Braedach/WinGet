@@ -31,7 +31,7 @@ $apps = @(
 Foreach ($app in $apps) 
     {
     #check if the app is already installed
-    $listApp = winget list --exact -q $app.id
+    $listApp = winget list --exact --accept-source-agreements -q $app.id
     if ([String]::Join("", $listApp).Contains($app.id)) 
         {
 

@@ -9,7 +9,7 @@
 
     Notes:
         Tested 02-12-2021
-        Remove the Google.Chrome entry in production
+        Can be tested by installing Google.Chrome.Dev before running the code
         Remove the hold on the uninstalll line in production
         See no need to generate a remediation script - this should run fine on standard intune run times.
 
@@ -38,7 +38,7 @@ Foreach ($app in $apps)
         Write-host "Found the following application installed:" $app.id -ForegroundColor Red
 
         Write-Host "Uninstalling the following application" $app.id -ForegroundColor Yellow
-        #winget uninstall --exact --silent --force $app.id 
+        winget uninstall --exact --silent $app.id 
         }
 
     else 

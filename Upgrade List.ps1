@@ -1,4 +1,4 @@
-﻿<#
+<#
 
     Reference
         https://www.codewrecks.com/post/general/winget-update-selective/
@@ -10,7 +10,10 @@
 
         winget upgrade --all --force --accept-package-agreements --accept-source-agreements
 
-        The code is not proactive remediation ready, but can be with a couple of exit statements.
+        Proactive remediation ready
+        Uploaded in test tenant 2021-12-17 for testing
+        The above listed command is the remediation code.  Issues still exist with application management
+        Refer to WinGet Github for pull requests.
 
 
 #>
@@ -69,9 +72,7 @@ if (!($upgradeResult -match "No installed package found matching input criteria.
 
             $upgradeList | Format-Table
 
-            #Actual upgrade command - been removed as this code needs to be rewritten for proactive remediation
-
-            #winget upgrade --all --force --accept-package-agreements --accept-source-agreements
+            exit 1
 
 
     }
@@ -80,8 +81,7 @@ else
     {
 
     Write-Host "There is nothing to upgrade" -ForegroundColor Yellow
+    exit 0
 
     }
-
-
 
